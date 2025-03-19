@@ -1,0 +1,114 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Lighter background */
+    transition: background-color 0.3s ease;
+}
+
+h1 {
+    color: #212529; /* Darker text color */
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+form {
+    margin: 30px auto; /* Centered form */
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #dee2e6; /* Lighter border */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #495057;
+    transition: color 0.3s ease;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form-container label, .form-container input {
+    margin-bottom: 10px;
+}
+
+.password-toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.password-toggle input[type="password"] {
+    width: 80%;
+}
+
+.password-toggle label {
+    margin-left: 5px;
+    cursor: pointer;
+}
