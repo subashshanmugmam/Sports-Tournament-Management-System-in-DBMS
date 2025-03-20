@@ -54,6 +54,63 @@ INSERT INTO `tournaments` (`name`, `sport`, `date`, `location`, `status`) VALUES
 ('Cricket World Cup', 'Cricket', '2025-10-05', 'India', 'upcoming');
 
 -- -----------------------------------------------------
+-- Table `registrations`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `registrations` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `user_id` INT NOT NULL,
+  `tournament_id` INT NOT NULL,
+  `registration_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` ENUM('pending', 'approved', 'rejected') NOT NULL DEFAULT 'pending',
+  `team_name` VARCHAR(255) NULL,
+  `contact_person` VARCHAR(255) NOT NULL,
+  `contact_number` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_registrations_users1` (`user_id`),
+  INDEX `fk_registrations_tournaments1` (`tournament_id`),
+  CONSTRAINT `fk_registrations_users1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  CONSTRAINT `fk_registrations_tournaments1` FOREIGN KEY (`tournament_id`) REFERENCES `tournaments` (`id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `registrations`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `registrations` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `user_id` INT NOT NULL,
+  `tournament_id` INT NOT NULL,
+  `registration_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` ENUM('pending', 'approved', 'rejected') NOT NULL DEFAULT 'pending',
+  `team_name` VARCHAR(255) NULL,
+  `contact_person` VARCHAR(255) NOT NULL,
+  `contact_number` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_registrations_users1` (`user_id`),
+  INDEX `fk_registrations_tournaments1` (`tournament_id`),
+  CONSTRAINT `fk_registrations_users1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  CONSTRAINT `fk_registrations_tournaments1` FOREIGN KEY (`tournament_id`) REFERENCES `tournaments` (`id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `registrations`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `registrations` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `user_id` INT NOT NULL,
+  `tournament_id` INT NOT NULL,
+  `registration_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` ENUM('pending', 'approved', 'rejected') NOT NULL DEFAULT 'pending',
+  `team_name` VARCHAR(255) NULL,
+  `contact_person` VARCHAR(255) NOT NULL,
+  `contact_number` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_registrations_users1` (`user_id`),
+  INDEX `fk_registrations_tournaments1` (`tournament_id`),
+  CONSTRAINT `fk_registrations_users1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  CONSTRAINT `fk_registrations_tournaments1` FOREIGN KEY (`tournament_id`) REFERENCES `tournaments` (`id`)
+) ENGINE = InnoDB;
+
+-- -----------------------------------------------------
 -- Table `teams`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `teams` (
